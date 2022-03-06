@@ -1,10 +1,10 @@
 # INSTAGRAM
 
-#### Author: [Eric N](https://github.com/erhic/Instagram)
+### Author: [Eric N](https://github.com/erhic/Instagram)
 
 ### Description
-----
-    This is a website application that allows you to post ephemeral photos that show up separately from your profile.Comments can be made on the post as well as likes can be added on the post.
+
+This is a website application that allows you to post ephemeral photos that show up separately from your profile.Comments can be made on the post as well as likes can be added on the post.
 ### BDD
 
 | Behaviour | Input | Output |
@@ -41,12 +41,12 @@
         $ python3 -m venv --without-pip virtual
       
         
-* Installing Flask and other Modules
+* Installing Django and other Modules
 
         $ pip install Django
         $ pip install pillow
         $ pip install python-dotenv
-        $ pip install psycopg2
+      
        
         
 
@@ -55,7 +55,7 @@
 
 * To run the application, in your terminal:
 
-        $ python3 manage.py accounts
+        $ python3 manage.py runserver
 
 
 ### Support and Contact Details
