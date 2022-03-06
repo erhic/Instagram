@@ -26,39 +26,39 @@
     {% block content %}
     <div class="row mt-4">
         <div class="col-md-4 mx-auto">
-            <div class="card form-card" style="width: 20rem;">
-                <div class="card-body">
+            <div class="card form-card" style="width: 21rem;">
+                <div class="card-body p-2">
                     <h4 class="text-center m-4 " id="logoname h2 "> Instagram</h4>
                     <form action="{% url 'register'%}" class="mb-5" method="POST">
                         {% csrf_token %}
-                        <div class="form-group text-center mt-3">
-                            <label for="exampleInputPassword1">Email</label> {{form.email}}
+                        <div class="form-group text-center mt-4 px-2">
+                            {{form.email}}
                         </div>
-                        <div class="form-group text-center mt-3">
+                        <div class="form-group text-center mt-4 px-2">
                             {{form.fullname}}
                         </div>
-                        <div class="form-group text-center mt-3">
-                            <label for="exampleInputPassword1">Username</label> {{form.username}}
+                        <div class="form-group text-center mt-4 px-2">
+                            {{form.username}}
 
                         </div>
-                        <div class="form-group text-center mt-3">
-                            <label for="exampleInputPassword1">Password</label> {{form.password}}
+                        <div class="form-group text-center mt-4 px-2 ">
+                            {{form.password}}
                             <span class="text-danger">{{ form.non_field_errors }} </span>
                         </div>
-                        <div class="form-group text-center mt-3">
-                            <label for="exampleInputPassword1">ConfirmPassword</label> {{form.confirm_password}}
+                        <div class="form-group text-center px-2 mt-4">
+                            {{form.confirm_password}}
                             <span class="text-danger">{{ form.non_field_errors }}</span>
                         </div>
-                        <div class="form-group d-grid mt-3 text-center">
-                            <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
+                        <div class="form-group d-grid mt-3 px-2 text-center">
+                            <button type="submit" class="btn btn-info text-white btn-block mb-3 fw-bold">Sign Up</button>
                         </div>
 
-                        <p class="text-center text-muted">By signing up, you agree to our Terms , <a href="#">Data Policy and Cookies
-               Policy</a>.</p>
+                        <p class="text-center text-muted px-2">By signing up, you agree to our <span class="text-dark fw-bold text-muted"> Terms</span>, <a href="#" class="text-decoration-none"><span class="text-dark fw-bold text-muted "> Data Policy and Cookies
+               Policy</span></a>.</p>
                     </form>
                 </div>
             </div>
-            <div class="mt-2 bg-light p-2" style="width: 20rem;">
+            <div class="card mt-2  p-1" style="width: 21rem;">
                 <ul class=" list-group list-group-flush">
                     <li class="list-group-item ">
                         <p class="text-center "><span>Have an account?</span> <a href="{% url 'login'%} ">Login</a></p>
