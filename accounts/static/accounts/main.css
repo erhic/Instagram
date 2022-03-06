@@ -1,18 +1,14 @@
-body {
-    background-color: aquamarine;
-}
-
-
 /* start header */
 
 
 /* 
 @import url('http://fonts.cdnfonts.com/css/billabong'); */
 
-.logoname {
+.logoname,
+#logoname {
     /* font-family: 'Billabong', sans-serif; */
     font-family: 'Grand Hotel', cursive !important;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 .navigation {

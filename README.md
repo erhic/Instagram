@@ -11,8 +11,7 @@
 | :---------------- | :---------------: | ------------------: |
 | Display login page | **On page load** | Input form to be field to login |
 | Display register | **Click on register** | Provide input fields to filled for registration |
-| Display posts  | **On Login** |
- Redirected to the varous posts category |
+| Display posts  | **On Login** |Redirected to the varous posts category |
 
 
 ### Technologies Used
@@ -21,6 +20,7 @@
 - Python 3.8.10
 - Django
 - Bootstrap
+- CSS
 
 ### Setup and Installion Process
 ----
