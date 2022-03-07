@@ -1,5 +1,5 @@
 import re
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth import login
 from .forms import SignupForm
 from django.contrib.auth.models import User
@@ -51,4 +51,8 @@ def login_user(request):
             return redirect('home')
 
     return render(request, 'accounts/login.html')
+
+def activate(request, uib64, token):
+    
+    return HttpResponse("Account Activated successful!")
 
