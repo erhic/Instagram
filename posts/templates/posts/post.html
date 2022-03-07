@@ -1,0 +1,4 @@
+ {% extends "posts/main.html"%}{% block content %} {%for post in posts%}
+<p>{{post.author}}</p>
+<p>{{post.image_caption}}</p>
+{%endfor%} {%endblock%}
