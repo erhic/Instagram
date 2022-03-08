@@ -126,3 +126,84 @@
 
 
 /* end header */
+
+
+/*post card */
+
+.card {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 614px;
+    height: auto;
+    border: .8px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 60px;
+}
+
+.card_header {
+    padding: 10px;
+}
+
+.card_header a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.profile_img {
+    display: inline-block;
+    background-color: rgb(56, 192, 147);
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    border: 0 solid #000000;
+    border-radius: 50%;
+}
+
+.post_info {
+    display: inline-block;
+    padding-left: 14px;
+}
+
+.post_location {
+    font-size: 12px;
+    color: gray;
+    padding: 0;
+    margin: 0;
+}
+
+.post_name {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.post_option {
+    font-size: 15px;
+    float: right;
+    display: inline-block;
+    color: #ccc;
+    padding: 5px;
+    margin: 4px;
+}
+
+.post_image {
+    width: 100%;
+    height: 614px;
+}
+
+.four_icons {
+    display: inline-block;
+    width: 100%;
+    margin: 4px 0px 0px;
+    padding: 0px 16px;
+}
+
+.four_icons a {
+    padding: 7px;
+    font-size: 25px;
+    color: slategray;
+    font-weight: 600;
+}
