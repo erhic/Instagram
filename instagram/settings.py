@@ -32,6 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ''
+cloudinary.config( 
+  cloud_name = "dayqmj50s", 
+  api_key = "322347289834666", 
+  api_secret = "y37FBwHvxjrAWClpa3LEYUNQsYw",
+  secure=True
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
