@@ -20,7 +20,7 @@ class PostCreateView(CreateView):
     queryset= Post.objects.all()
     success_url='/'
     
-    def form_invalid(self,form):
+    def form_isvalid(self,form):
         print(form.cleaned_data)
         form.instance.author=self.request.user
         return super().form_valid(form)
