@@ -1,6 +1,6 @@
 # INSTAGRAM
 
-### Author: [Eric N](https://github.com/erhic/Instagram)
+## Author: [Eric N](https://github.com/erhic/Instagram)
 
 ### Description
 
