@@ -1,4 +1,28 @@
  {% extends "posts/main.html"%}{% block content %} {%for post in posts%}
-<p>{{post.author}}</p>
-<p>{{post.image_caption}}</p>
+
+<div class="card">
+    <div class="card_header">
+        <div class="profile_img"></div>
+        <div class="post_info">
+            <div class="post_name">{{post.author}}</div>
+            <div class="post_location"></div>
+        </div>
+        <div class="post_option"><i class="fas fa-ellipsis-h"></i></div>
+    </div>
+    <div class="post_image ">
+        <img class="imag w-100 h-100" src="{{post.image.url}}" alt="">
+    </div>
+    <div class="four_icons">
+        <a href=""><i class="far fa-heart"></i></a>
+        <a href=""><i class="far fa-comment"></i></a>
+        <a href=""><i class="far fa-share-square"></i></a>
+        <a href=""><i class="far fa-bookmark"></i></a>
+    </div>
+    <div class="likes"><a href="">200{{ post.likes.count }}</a></div>
+    <div class="caption"><span class="fs-3">{{post.author}}</span>
+        <a href=""></a>{{post.image_caption}}</div>
+    <div class="timeposted">{{post.created_at|timesince}} ago</div>
+</div>
+
+
 {%endfor%} {%endblock%}

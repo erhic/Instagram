@@ -11,6 +11,11 @@
     font-weight: 200;
 }
 
+li::marker {
+    display: none;
+    color: green
+}
+
 .navigation {
     background-color: #ffffff;
     height: 80px;

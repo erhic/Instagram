@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 
 
 
+
 def ForbiddenUsers(value):
     forbidden_users = ['admin', 'css', 'js', 'authenticate', 'login', 'logout', 'administrator', 'root',
     'email', 'user', 'join', 'sql', 'static', 'python', 'delete']

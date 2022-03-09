@@ -6,14 +6,14 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 # from django.http.response import HttpResponse
+# account registration using email
+from django.core.mail import EmailMessage
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from django.contrib.sites.shortcuts import get_current_site
 
 # Create your views here.
-
-def index(request):
-    return render(request,'accounts/index.html')
-
-def login_user(request):
-    return render(request, 'accounts/login.html')
 
 
 
@@ -25,10 +25,13 @@ def register(request):
 			email = form.cleaned_data.get('email')
 			password = form.cleaned_data.get('password')
 			User.objects.create_user(username=username, email=email, password=password)
-			# return redirect('login_user')
+			messages.info(request, f'Account created successfully')
+            
 	else:
+     
 		form = SignupForm()
-	
+         
+   
 	context = {
 		'form':form,
 	}
@@ -47,9 +50,10 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            messages.info(request, 'Logged in successfully')
-            return redirect('home')
-
+            messages.info(request, f'Logged in successfully')
+            return redirect('register')
+        
+    
     return render(request, 'accounts/login.html')
 
 def activate(request, uib64, token):

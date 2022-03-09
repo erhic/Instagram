@@ -1,19 +1,28 @@
-from email import message
+
 from django.shortcuts import render,redirect
 from django.contrib import messages
-
+from .forms import UserRegisterForm
 # Create your views here.
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+# from django.urls import reverse, reverse_lazy
+
 
 
 def register (request):
     if request.method=='POST':
-        form=UserCreationForm(request.POST)
+        form=UserRegisterForm(request.POST)
         if form.is_valid():
+            form.save()
             username=form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {{username}}')
+            messages.success(request, f'Account created successfuly')
             return redirect ('posts:post_list')
+            # success_url = reverse_lazy("posts:post_list")
     else:
-        form=UserCreationForm()
-    context={'form':form}
-    return render (request, 'usersaccount/register.html',context)
+        form=UserRegisterForm()
+        
+    return render (request, 'usersaccount/register.html',{'form':form})
+
+@login_required
+def profile(request):
+    return render (request,'usersaccount/profile.html')
