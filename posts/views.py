@@ -51,4 +51,4 @@ class PostDeleteView(DeleteView):
         return get_object_or_404(Post, id=id_)
 
     def get_success_url(self):
-        return reverse('posts:post_list')
+        return reverse('posts:postlist')

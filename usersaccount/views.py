@@ -16,8 +16,8 @@ def register (request):
             form.save()
             username=form.cleaned_data.get('username')
             messages.success(request, f'Account created successfuly')
-            return redirect ('posts:post_list')
-            # success_url = reverse_lazy("posts:post_list")
+            return redirect ('posts:postlist')
+            # success_url = reverse_lazy("posts:postlist")
     else:
         form=UserRegisterForm()
         
