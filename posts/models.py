@@ -13,3 +13,11 @@ class Post(models.Model):
     def __str__(self):
         return self.image_caption
      
+class Comments(models.Model):
+    post=models.ForeignKey('Post',related_name='comment',on_delete=models.CASCADE,blank=True)
+    name= models.CharField(max_length=30)
+    body= models.CharField(max_length=30)
+    date_at = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+        return '%s-%s' %(self.post.author,self.name)

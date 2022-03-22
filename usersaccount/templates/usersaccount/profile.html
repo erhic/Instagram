@@ -1,8 +1,14 @@
 {% extends 'usersaccount/base.html'%}{%load crispy_forms_tags %} {% block content %}
 <div class="row mt-4 py-5">
-    <div class="col-md-4 mx-auto">
-        <div class="card form-card" style="width: 22rem;">
-            <h1>{{user.username}}</h1>
+    <div class="col-md-4 mx-auto p-4">
+        <div class="card form-card p-3 card-hover-shadow" style="width: 22rem;">
+            <p class="text-center"><img height=100 width=100 src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt=""></p>
+            <p class="text-center fs-3">
+                {{user.username}}
+            </p>
+            <p class="text-center fs-5">
+                {{user.email}}
+            </p>
+
         </div>
-    </div>
-    {% endblock %}
+        {% endblock %}

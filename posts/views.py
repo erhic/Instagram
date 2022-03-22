@@ -20,9 +20,9 @@ class PostCreateView(CreateView):
     queryset= Post.objects.all()
     success_url='/'
     
-    def form_isvalid(self,form):
+    def form_is_valid(self,form):
         print(form.cleaned_data)
-        form.instance.author=self.request.user
+        form.instance.author=self.request.user.FILE
         return super().form_valid(form)
     
 class PostDetailView(DetailView):
