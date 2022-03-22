@@ -5,6 +5,20 @@
 ### Description
 
 This is a website application that allows you to post ephemeral photos that show up separately from your profile.Comments can be made on the post as well as likes can be added on the post.
+### Snapshots
+#### Post Page
+![Screenshot](snapshots/Screen1.png)
+
+#### Post-Comment Section Page
+![Screenshot](snapshots/Screen2.png)
+
+#### Post Upload Page
+![Screenshot](snapshots/Screen3.png)
+
+#### Login Page
+![Screenshot](snapshots/Screen4.png)
+
+
 ### BDD
 
 | Behaviour | Input | Output |
